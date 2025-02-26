@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デ二郎</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <!-- googlefonts -->
+  <!-- デジタル -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <img src="./img/logo.png" alt="" class="logo-img">
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html" class="dezi">二郎を作る</a></li>
+        <li><a href="option.html" class="dezi">デ二郎とは</a></li>
+        <li><a href="log.html" class="dezi">ログイン</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <article class="log-article">
+    <div class="loginbox">
+      <img src="./img/log.png" alt="" class="logo">
+      <h1 class="dezi">ログイン</h1>
+      <form id="loginForm">
+          <p class="dezi">ユーザネーム</p>
+          <input type="text" name="name" id="username" placeholder="名前入力">
+          <p class="dezi">パスワード</p>
+          <input type="password" name="pass" id="password" placeholder="パスワード入力">
+          <input type="submit" value="ログイン">
+          <a href="#new" class="dezi">新規登録</a>
+      </form>
+    </div>
+  </article>
+  
+  <article class="new-article" id="new">
+    <header class="header">
+      <img src="./img/logo.png" alt="" class="logo-img">
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html" class="dezi">二郎を作る</a></li>
+          <li><a href="option.html" class="dezi">デ二郎とは</a></li>
+          <li><a href="log.html" class="dezi">ログイン</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="newbox">
+      <img src="./img/log.png" alt="" class="logo">
+      <h1 class="dezi">新規登録</h1>
+      <form id="newForm">
+          <p class="dezi">ユーザネーム</p>
+          <input type="text" name="name" id="newUsername" placeholder="名前入力">
+          <p class="dezi">パスワード</p>
+          <input type="password" name="pass" id="newPassword" placeholder="パスワード入力">
+          <input type="submit" value="登録">
+      </form>
+    </div>
+  </article>
+
+
+
+  <script>
+    // ユーザ情報のリスト
+    const users = [
+      { username: 'nakamura', password: '123' },
+      { username: 'suzuki', password: '456' },
+      { username: 'tanaka', password: '789' },
+    ];
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // フォームの通常の送信を防止
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // ユーザ情報のリストをチェック
+      const user = users.find(user => user.username === username && user.password === password);
+
+      if (user) {
+          alert('ログイン成功');
+          // ローカルストレージにユーザ情報を保存
+          localStorage.setItem('userValue', user.username);
+          window.location.href = 'account.html'; // リダイレクト先のURLを指定
+      } else {
+          alert('ユーザネームまたはパスワードが間違っています');
+      }
+    });
+
+    document.getElementById('newForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // フォームの通常の送信を防止
+
+      const newUsername = document.getElementById('newUsername').value;
+      const newPassword = document.getElementById('newPassword').value;
+
+      // 新しいユーザー情報をリストに追加
+      users.push({ username: newUsername, password: newPassword });
+
+      alert('ユーザー登録成功');
+      // ログイン画面にリダイレクト
+      window.location.href = '#';
+    });
+  </script>
+</body>
+</html>

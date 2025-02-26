@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デ二郎</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <!-- googlefonts -->
+  <!-- デジタル -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <img src="./img/logo.png" alt="" class="logo-img">
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html" class="dezi">二郎を作る</a></li>
+        <li><a href="option.html" class="dezi">デ二郎とは</a></li>
+        <li><a href="log.html" class="dezi">ログイン</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <article class="account-article">
+    <div class="userName-box">
+      <h1 class="dezi">アカウントページ</h1>
+    </div>
+    <div class="keep-box">
+      <h1 class="dezi">直前のお客様の保存情報</h1>
+      <img id="qr-img" alt="QRコード" class="account-qr-img">
+    </div>
+  </article>
+
+
+  <script>
+    // ローカルストレージからユーザ情報を取得
+    const userQr = localStorage.getItem('userQr');
+
+    // QRコード画像を表示
+    if (userQr) {
+        document.getElementById('qr-img').src = userQr;
+    } else {
+        document.getElementById('qr-img').alt = 'QRコードが見つかりません';
+    }
+  </script>
+</body>
+</html>

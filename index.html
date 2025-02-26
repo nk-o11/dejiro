@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デ二郎</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <!-- googlefonts -->
+  <!-- デジタル -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <img src="./img/logo.png" alt="" class="logo-img">
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html" class="dezi">二郎を作る</a></li>
+        <li><a href="option.html" class="dezi">デ二郎とは</a></li>
+        <li><a href="log.html" class="dezi">ログイン</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <article class="article">
+    <h1 class="dezi">デジデジチェックを行いますか？？</h1>
+    <a href="#hungry"><img src="./img/start.png" alt="" class="start-img"></a>
+  </article>
+
+  <div class="select-box" id="hungry">
+    <a href=""><img src="./img/logo.png" alt="" class="home-img"></a>
+    <div class="select">
+      <h1 class="dezi">今のおなかの調子は？？</h1>
+      <div class="radio-box">
+        <input type="radio" id="h1" name="hungry" value="1">
+        <label for="h1">
+            <img src="./img/hungry1.png" alt="Option 1" class="option1">
+        </label>
+    
+        <input type="radio" id="h2" name="hungry" value="2">
+        <label for="h2">
+            <img src="./img/hungry2.png" alt="Option 2" class="option2">
+        </label>
+    
+        <input type="radio" id="h3" name="hungry" value="3">
+        <label for="h3">
+            <img src="./img/hungry3.png" alt="Option 3" class="option3">
+        </label>
+      </div>
+  
+  
+      <div class="pagebtn">
+        <a href="#" id="back"><img src="" alt="" class="pagebtn-img" id="back-btn"></a>
+        <a href="#nk" id="next1"><img src="./img/next.png" alt="" class="pagebtn-img" id="next-btn"></a>
+      </div>
+    </div> 
+  </div>
+
+  <div class="select-box" id="nk">
+    <a href=""><img src="./img/logo.png" alt="" class="home-img"></a>
+    <div class="select">
+      <h1 class="dezi">食後の予定は？？</h1>
+      <div class="radio-box">
+        <input type="radio" id="n1" name="nk" value="1">
+        <label for="n1">
+            <img src="./img/nk1.png" alt="Option 1" class="option1">
+        </label>
+    
+        <input type="radio" id="n2" name="nk" value="2">
+        <label for="n2">
+            <img src="./img/nk2.png" alt="Option 2" class="option2">
+        </label>
+    
+        <input type="radio" id="n3" name="nk" value="3">
+        <label for="n3">
+            <img src="./img/nk3.png" alt="Option 3" class="option3">
+        </label>
+      </div>
+  
+  
+      <div class="pagebtn">
+        <a href="#hungry" id="back"><img src="./img/back.png" alt="" class="pagebtn-img" id="back-btn"></a>
+        <a href="#ys" id="next2"><img src="./img/next.png" alt="" class="pagebtn-img" id="next-btn"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="select-box" id="ys">
+    <a href=""><img src="./img/logo.png" alt="" class="home-img"></a>
+    <div class="select">
+      <h1 class="dezi">現在のコンディションは？？</h1>
+      <div class="radio-box">
+        <input type="radio" id="y1" name="ys" value="1">
+        <label for="y1">
+            <img src="./img/ys1.png" alt="Option 1" class="option1">
+        </label>
+    
+        <input type="radio" id="y2" name="ys" value="2">
+        <label for="y2">
+            <img src="./img/ys2.png" alt="Option 2" class="option2">
+        </label>
+    
+        <input type="radio" id="y3" name="ys" value="3">
+        <label for="y3">
+            <img src="./img/ys3.png" alt="Option 3" class="option3">
+        </label>
+      </div>
+  
+  
+      <div class="pagebtn">
+        <a href="#nk" id="back"><img src="./img/back.png" alt="" class="pagebtn-img" id="back-btn"></a>
+        <a href="#ck" id="next3"><img src="./img/next.png" alt="" class="pagebtn-img" id="next-btn"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="select-box" id="ck">
+    <a href=""><img src="./img/logo.png" alt="" class="home-img"></a>
+    <div class="select">
+      <h1 class="dezi">あなたのデジチェックの結果は！！</h1>
+      <h1 class="dezi" style="font-size: 25px;">麺の量は：<div class="m" style="font-size: 40px;"></div></h1>
+      <h1 class="dezi" style="font-size: 25px;">ニンニク：<div class="n" style="font-size: 40px;"></div></h1>
+      <h1 class="dezi" style="font-size: 25px;">ヤサイ：<div class="y" style="font-size: 40px;"></div></h1>
+      
+      <div class="pagebtn">
+        <a href="#hungry" id="back"><img src="./img/back.png" alt="" class="pagebtn-img" id="back-btn"></a>
+        <a href="#check" id="next3"><img src="./img/next.png" alt="" class="pagebtn-img" id="next-btn"></a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <article class="check-article" id="check">
+    <a href=""><img src="./img/logo.png" alt="" class="home-img"></a>
+    <div class="qr-wapp">
+      <div class="qr-box">
+        <img src="" alt="" id="qr-img">
+      </div>
+      <h1 class="dezi" style="color: rgb(151, 2, 2);">※店員にこのQRコードをご提示ください</h1>
+      <a href="log.html"><img src="./img/keep.png" alt="" class="keep-img"></a>
+    </div>
+  </article>
+</body>
+</html>
