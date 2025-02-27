@@ -78,8 +78,9 @@ body {
 
 .start-img {
   width: 100%;
-  max-width: 300px;
-  margin: 20px auto;
+  width: 300px;
+  display: block; /* 画像をブロック要素として扱う */
+  margin: 0 auto;
 }
 
 /* select-box */
