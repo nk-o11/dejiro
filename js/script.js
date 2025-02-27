@@ -24,7 +24,7 @@ document.querySelectorAll('input[type="radio"]').forEach(radio => {
 });
 
 //タッチイベント
-document.querySelectorAll('a').forEach(aTag => {
+/* document.querySelectorAll('a').forEach(aTag => {
   aTag.addEventListener('click', function(e) {
     alert('リンクがクリックされました: ' + this.href);
   });
@@ -32,7 +32,7 @@ document.querySelectorAll('a').forEach(aTag => {
   aTag.addEventListener('touchstart', function(e) {
     alert('リンクがタッチされました: ' + this.href);
   });
-});
+}); */
 
 
 const selectId = document.querySelector('select-id');
