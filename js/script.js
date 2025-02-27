@@ -24,14 +24,16 @@ document.querySelectorAll('input[type="radio"]').forEach(radio => {
 });
 
 //タッチイベント
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
+document.querySelectorAll('a').forEach(aTag => {
+  aTag.addEventListener('click', function(e) {
+    alert('リンクがクリックされました: ' + this.href);
+  });
+
+  aTag.addEventListener('touchstart', function(e) {
+    alert('リンクがタッチされました: ' + this.href);
   });
 });
+
 
 const selectId = document.querySelector('select-id');
 const option1 = document.querySelector('.option1');
