@@ -23,18 +23,6 @@ document.querySelectorAll('input[type="radio"]').forEach(radio => {
   });
 });
 
-//タッチイベント
-/* document.querySelectorAll('a').forEach(aTag => {
-  aTag.addEventListener('click', function(e) {
-    alert('リンクがクリックされました: ' + this.href);
-  });
-
-  aTag.addEventListener('touchstart', function(e) {
-    alert('リンクがタッチされました: ' + this.href);
-  });
-}); */
-
-
 const selectId = document.querySelector('select-id');
 const option1 = document.querySelector('.option1');
 const option2 = document.querySelector('.option2');
@@ -46,10 +34,63 @@ const next2 = document.getElementById('next2');
 const next3 = document.getElementById('next3');
 const qrImg = document.getElementById('qr-img');
 
-const start = document.querySelector('.start-img')
+const start = document.querySelector('.start-img');
+const selectHungry = document.querySelector('.select-hungry');
+const mainArticle = document.querySelector('.display-wapp');
 start.addEventListener('click', () => {
   localStorage.clear();
+  mainArticle.style.display = "none";
+  selectHungry.style.display = "block";
 });
+
+const hungryNext = document.querySelector('.hungry-next');
+const selectNk = document.querySelector('.select-nk');
+hungryNext.addEventListener('click', () => {
+  selectNk.style.display = "block";
+  selectHungry.style.display = "none";
+});
+
+const nkBack = document.querySelector('.nk-back');
+nkBack.addEventListener('click', () => {
+  selectHungry.style.display = "block";
+});
+
+const nkNext = document.querySelector('.nk-next');
+const selectYs = document.querySelector('.select-ys');
+nkNext.addEventListener('click', () => {
+  selectYs.style.display = "block";
+  selectNk.style.display = "none";
+});
+
+const ysBack = document.querySelector('.ys-back');
+ysBack.addEventListener('click', () => {
+  selectNk.style.display = "block";
+});
+
+const ysNext = document.querySelector('.ys-next');
+const selectCk = document.querySelector('.select-ck');
+ysNext.addEventListener('click', () => {
+  selectCk.style.display = "block";
+  selectYs.style.display = "none";
+});
+
+const ckBack = document.querySelector('.ck-back');
+ckBack.addEventListener('click', () => {
+  selectHungry.style.display = "block";
+});
+
+const ckNext = document.querySelector('.ck-next');
+const checkArticle = document.querySelector('.check-article');
+ysNext.addEventListener('click', () => {
+  checkArticle.style.display = "block";
+  selectCk.style.display = "none";
+});
+
+const keepImg = document.querySelector('.keep-img');
+keepImg.addEventListener('click', () => {
+  checkArticle.style.display = "none";
+});
+
 
 const userSelect = {
   'hungry':'',
