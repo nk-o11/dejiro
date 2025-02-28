@@ -13,7 +13,7 @@ body {
   background-image: radial-gradient(rgba(117, 103, 250, 1), rgba(95, 255, 169, 1));
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* googlefonts */
